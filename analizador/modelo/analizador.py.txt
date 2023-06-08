@@ -1,0 +1,60 @@
+# TODO: Implemente aquí la solución del ejercicio
+
+from abc import ABC,abstractmethod
+
+class ReglaAnalisis(ABC):
+
+    def __init__(self,nombre: str):
+        self.nombre = nombre
+
+    def _separar_palabras(self,texto:str)->str:
+        pass
+
+    @abstractmethod
+    def analizar(self,texto:str):
+        pass
+
+class ReglaPalabrasMasUsada(ReglaAnalisis):
+    def __init__(self,nombre: str,palabras_ordenadas):
+        self.palabras_ordenadas = palabras_ordenadas
+        super().__init__(nombre)
+
+    def analizar(self,texto:str):
+        pass
+
+
+class ReglaConteoPalabras(ReglaAnalisis):
+    def __init__(self,nombre: str, ConteoPalabras):
+        self.ConteoPalabras = ConteoPalabras
+        super().__init__(nombre)
+
+    def analizar(self,texto:str):
+            pass
+
+
+
+class ReglaTiempoLectura(ReglaAnalisis):
+    def __init__(self,nombre: str , tiempo_lectura: str ,TASA_LECTURA:int = 238):
+        self.TASA_LECTURA = TASA_LECTURA
+        self.tiempo_lectura = tiempo_lectura
+
+        super().__init__(nombre)
+
+    def analizar(self,texto:str):
+        pass
+
+
+
+
+
+class Analizador():
+
+
+
+
+
+
+
+
+
+
